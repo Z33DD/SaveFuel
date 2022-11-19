@@ -5,6 +5,9 @@
 
 package com.mycompany.savefuelproject;
 
+import Views.MainScreen;
+import javax.swing.JFrame;
+
 /**
  *
  * @author J Nogueira
@@ -12,6 +15,8 @@ package com.mycompany.savefuelproject;
 public class SaveFuelProject {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        JFrame programa = new MainScreen();
+        programa.setResizable(false);
+        programa.setVisible(true);
     }
 }
