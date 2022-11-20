@@ -5,7 +5,8 @@
 
 package com.mycompany.savefuelproject;
 
-import Views.MainScreen;
+import Views.HomeScreen;
+import Views.LoginScreen;
 import javax.swing.JFrame;
 
 /**
@@ -15,8 +16,7 @@ import javax.swing.JFrame;
 public class SaveFuelProject {
 
     public static void main(String[] args) {
-        JFrame programa = new MainScreen();
-        programa.setResizable(false);
+        JFrame programa = new LoginScreen();
         programa.setVisible(true);
     }
 }
