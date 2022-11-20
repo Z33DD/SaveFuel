@@ -268,7 +268,7 @@ public class LoginScreen extends javax.swing.JFrame {
         if(mode)
             this.modoNoturno.setSelected(true);
         else
-            this.modoNoturno.setSelected(true);
+            this.modoNoturno.setSelected(false);
     }
     /**
      * @param args the command line arguments
