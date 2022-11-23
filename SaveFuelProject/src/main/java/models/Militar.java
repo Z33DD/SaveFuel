@@ -4,8 +4,8 @@
  */
 package models;
 
-import Enums.Patente;
-import Enums.TipoUsuario;
+import models.enums.Patente;
+import models.enums.TipoUsuario;
 
 /**
  *

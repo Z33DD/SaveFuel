@@ -5,8 +5,7 @@
 
 package com.mycompany.savefuelproject;
 
-import Views.HomeScreen;
-import Views.LoginScreen;
+import view.LoginScreen;
 import javax.swing.JFrame;
 
 /**
