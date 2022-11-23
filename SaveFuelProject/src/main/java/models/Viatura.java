@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Models;
+package models;
 
 /**
  *
  * @author J Nogueira
  */
-public class Fornecedor {
+public class Viatura {
     
     private long id;
-    private String nome;
-    private String cnpj;
-    
+    private String placa;
+    private long odometro;
+     
     public long getId() {
         return id;
     }
@@ -22,19 +22,19 @@ public class Fornecedor {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getPlaca() {
+        return placa;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public long getOdometro() {
+        return odometro;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    }  
+    public void setOdometro(long odometro) {
+        this.odometro = odometro;
+    }
 }

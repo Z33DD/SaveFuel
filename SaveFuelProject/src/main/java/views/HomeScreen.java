@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Views;
+package view;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
@@ -151,7 +151,6 @@ public class HomeScreen extends javax.swing.JFrame {
         setTitle("SaveFuel");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
-        setPreferredSize(new java.awt.Dimension(800, 400));
         setResizable(false);
 
         barraMenu.setToolTipText("");
