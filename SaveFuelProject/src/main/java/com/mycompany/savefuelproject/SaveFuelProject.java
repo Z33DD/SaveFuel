@@ -5,6 +5,10 @@
 
 package com.mycompany.savefuelproject;
 
+import Views.HomeScreen;
+import Views.LoginScreen;
+import javax.swing.JFrame;
+
 /**
  *
  * @author J Nogueira
@@ -12,6 +16,7 @@ package com.mycompany.savefuelproject;
 public class SaveFuelProject {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        JFrame programa = new LoginScreen();
+        programa.setVisible(true);
     }
 }
