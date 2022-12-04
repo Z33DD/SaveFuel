@@ -4,6 +4,7 @@
  */
 package views;
 
+import views.fornecedor.FornecedorScreen;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import com.formdev.flatlaf.FlatLaf;
@@ -20,7 +21,7 @@ public class HomeScreen extends javax.swing.JFrame {
     public HomeScreen() {
         initComponents();
         this.setResizable(false);
-        this.modoNoturno.setSelected(false);;
+        this.modoNoturno.setSelected(false);
     }
 
     /**
@@ -189,11 +190,21 @@ public class HomeScreen extends javax.swing.JFrame {
         barraMenu.add(jMenu1);
 
         jMenu2.setText("Cadastro");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
 
         jMenuItem3.setText("Usuários");
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setText("Forenecedores");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuItem5.setText("Tanques");
@@ -312,6 +323,17 @@ public class HomeScreen extends javax.swing.JFrame {
             });
         }
     }//GEN-LAST:event_modoNoturnoActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        FornecedorScreen screen = new FornecedorScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2ActionPerformed
     public void setModoNoturno(boolean mode){
         if(mode)
             this.modoNoturno.setSelected(true);

@@ -4,17 +4,30 @@
  */
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author J Nogueira
  */
+
+@Entity
+@Table(name = "Abastecimento")
 public class Abastecimento {
-    
+    @Id
     private long id;
-    private Militar militar;
-    private Viatura viatura;
-    private Tanque tanque;
+    @Column
+    private long militarId;
+    @Column
+    private long viaturaId;
+    @Column
+    private long tanqueId;
+    @Column
     private double precoPorLitro;
+    @Column
     private double quantidadeDeLitros;
 
     public long getId() {
@@ -25,28 +38,28 @@ public class Abastecimento {
         this.id = id;
     }
 
-    public Militar getMilitar() {
-        return militar;
+    public long getMilitarId() {
+        return militarId;
     }
 
-    public void setMilitar(Militar militar) {
-        this.militar = militar;
+    public void setMilitarId(long militarId) {
+        this.militarId = militarId;
     }
 
-    public Viatura getViatura() {
-        return viatura;
+    public long getViaturaId() {
+        return viaturaId;
     }
 
-    public void setViatura(Viatura viatura) {
-        this.viatura = viatura;
+    public void setViaturaId(long viaturaId) {
+        this.viaturaId = viaturaId;
     }
 
-    public Tanque getTanque() {
-        return tanque;
+    public long getTanqueId() {
+        return tanqueId;
     }
 
-    public void setTanque(Tanque tanque) {
-        this.tanque = tanque;
+    public void setTanqueId(long tanqueId) {
+        this.tanqueId = tanqueId;
     }
 
     public double getPrecoPorLitro() {

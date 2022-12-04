@@ -4,14 +4,22 @@
  */
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 /**
  *
  * @author J Nogueira
  */
+@Entity
+@Table(name = "Viatura")
 public class Viatura {
-    
+    @Id
     private long id;
+    @Column
     private String placa;
+    @Column
     private long odometro;
      
     public long getId() {

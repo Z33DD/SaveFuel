@@ -6,19 +6,30 @@ package models;
 
 import models.enums.Patente;
 import models.enums.TipoUsuario;
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 /**
  *
  * @author J Nogueira
  */
+@Entity
+@Table(name = "Militar")
 public class Militar {
-    
+    @Id
     private long id;
+    @Column
     private String nome;
+    @Column
     private Patente patente;
+    @Column
     private String username;
+    @Column
     private String senha;
+    @Column
     private Boolean isRoot;
+    @Column
     private TipoUsuario tipo;
     
     public long getId() {
