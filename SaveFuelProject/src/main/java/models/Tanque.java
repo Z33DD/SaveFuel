@@ -4,15 +4,24 @@
  */
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 /**
  *
  * @author J Nogueira
  */
+@Entity
+@Table(name = "Tanque")
 public class Tanque {
-    
+    @Id
     private long id;
+    @Column
     private double capacidade;
+    @Column
     private double cota;
+    @Column
     private double valorMedio;
     
     public long getId() {

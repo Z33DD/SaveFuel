@@ -4,17 +4,28 @@
  */
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 /**
  *
  * @author J Nogueira
  */
+@Entity
+@Table(name = "Fornecimento")
 public class Fornecimento {
-    
+    @Id
     private long id;
-    private Militar militar;
-    private Fornecedor fornecedor;
-    private Tanque tanque;
+    @Column
+    private long militarId;
+    @Column
+    private long fornecedorId;
+    @Column
+    private long tanqueId;
+    @Column
     private double precoPorLitro;
+    @Column
     private double quantidadeDeLitros;
 
     public long getId() {
@@ -25,28 +36,28 @@ public class Fornecimento {
         this.id = id;
     }
 
-    public Militar getMilitar() {
-        return militar;
+    public long getMilitarId() {
+        return militarId;
     }
 
-    public void setMilitar(Militar militar) {
-        this.militar = militar;
+    public void setMilitarId(long militarId) {
+        this.militarId = militarId;
     }
 
-    public Fornecedor getFornecedor() {
-        return fornecedor;
+    public long getFornecedorId() {
+        return fornecedorId;
     }
 
-    public void setFornecedor(Fornecedor fornecedor) {
-        this.fornecedor = fornecedor;
+    public void setFornecedorId(long fornecedorId) {
+        this.fornecedorId = fornecedorId;
     }
 
-    public Tanque getTanque() {
-        return tanque;
+    public long getTanqueId() {
+        return tanqueId;
     }
 
-    public void setTanque(Tanque tanque) {
-        this.tanque = tanque;
+    public void setTanqueId(long tanqueId) {
+        this.tanqueId = tanqueId;
     }
 
     public double getPrecoPorLitro() {

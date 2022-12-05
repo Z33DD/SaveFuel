@@ -4,14 +4,22 @@
  */
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 /**
  *
  * @author J Nogueira
  */
+@Entity
+@Table(name = "Fornecedor")
 public class Fornecedor {
-    
+    @Id
     private long id;
+    @Column
     private String nome;
+    @Column
     private String cnpj;
     
     public long getId() {
