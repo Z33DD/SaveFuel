@@ -4,10 +4,7 @@
  */
 package models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  *
@@ -18,6 +15,7 @@ import javax.persistence.Table;
 @Table(name = "Abastecimento")
 public class Abastecimento {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column
     private long militarId;

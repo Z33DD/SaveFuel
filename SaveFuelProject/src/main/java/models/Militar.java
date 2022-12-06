@@ -6,10 +6,8 @@ package models;
 
 import models.enums.Patente;
 import models.enums.TipoUsuario;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 /**
  *
  * @author J Nogueira
@@ -18,6 +16,7 @@ import javax.persistence.Table;
 @Table(name = "Militar")
 public class Militar {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column
     private String nome;
