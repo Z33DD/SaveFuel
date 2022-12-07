@@ -23,7 +23,7 @@ public class Militar {
     @Column
     private Patente patente;
     @Column
-    private String username;
+    private String login;
     @Column
     private String senha;
     @Column
@@ -55,12 +55,12 @@ public class Militar {
         this.patente = patente;
     }
 
-    public String getUsername() {
-        return username;
+    public String getLogin() {
+        return login;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setLogin(String username) {
+        this.login = username;
     }
 
     public String getSenha() {
