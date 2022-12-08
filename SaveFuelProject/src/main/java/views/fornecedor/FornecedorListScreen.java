@@ -48,20 +48,14 @@ public class FornecedorListScreen extends javax.swing.JFrame {
         jMenu5 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenuItem16 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
-        jMenu7 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -126,46 +120,25 @@ public class FornecedorListScreen extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem4);
 
-        jMenuItem5.setText("Tanques");
-        jMenu5.add(jMenuItem5);
-
         jMenuItem6.setText("Viaturas");
         jMenu5.add(jMenuItem6);
 
+        jMenuItem5.setText("Tanques");
+        jMenu5.add(jMenuItem5);
+
         jMenuBar1.add(jMenu5);
 
-        jMenu3.setText("Abastecimento");
+        jMenu9.setText("Lançamentos");
 
-        jMenuItem7.setText("Lançar Abastecimento");
-        jMenu3.add(jMenuItem7);
+        jMenuItem15.setText("Abastecimentos");
+        jMenu9.add(jMenuItem15);
 
-        jMenuItem8.setText("Editar Abastecimento");
-        jMenu3.add(jMenuItem8);
+        jMenuItem16.setText("Fornecimentos");
+        jMenu9.add(jMenuItem16);
 
-        jMenuBar1.add(jMenu3);
-
-        jMenu6.setText("Fornecimento");
-
-        jMenuItem9.setText("Lançar Fornecimento");
-        jMenu6.add(jMenuItem9);
-
-        jMenuItem10.setText("Editar Fornecimento");
-        jMenu6.add(jMenuItem10);
-
-        jMenuBar1.add(jMenu6);
+        jMenuBar1.add(jMenu9);
 
         jMenu4.setText("Relatórios");
-
-        jMenuItem11.setText("Abastecimento");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItem11);
-
-        jMenuItem12.setText("Fornecimento");
-        jMenu4.add(jMenuItem12);
 
         jMenuItem13.setText("Situação da Cota");
         jMenu4.add(jMenuItem13);
@@ -174,9 +147,6 @@ public class FornecedorListScreen extends javax.swing.JFrame {
         jMenu4.add(jMenuItem14);
 
         jMenuBar1.add(jMenu4);
-
-        jMenu7.setText("Sobre");
-        jMenuBar1.add(jMenu7);
 
         setJMenuBar(jMenuBar1);
 
@@ -247,10 +217,6 @@ public class FornecedorListScreen extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
-
     private void tableAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tableAncestorAdded
         
     }//GEN-LAST:event_tableAncestorAdded
@@ -300,27 +266,21 @@ public class FornecedorListScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JCheckBoxMenuItem modoNoturno;
     private javax.swing.JTable table;
