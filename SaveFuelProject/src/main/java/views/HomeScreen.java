@@ -13,6 +13,8 @@ import java.awt.EventQueue;
 import views.abastecimentos.AbastecimentosScreen;
 import views.fornecimentos.FornecimentosScreen;
 import views.militar.MilitarScreen;
+import views.relatorios.ConsumoMensal;
+import views.relatorios.SituacaoCota;
 import views.tanque.TanqueScreen;
 import views.viatura.ViaturaScreen;
 
@@ -61,9 +63,9 @@ public class HomeScreen extends javax.swing.JFrame {
         jMenu5 = new javax.swing.JMenu();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem16 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -249,15 +251,25 @@ public class HomeScreen extends javax.swing.JFrame {
 
         barraMenu.add(jMenu5);
 
-        jMenu4.setText("Relatórios");
+        jMenu6.setText("Relatórios");
 
-        jMenuItem13.setText("Situação da Cota");
-        jMenu4.add(jMenuItem13);
+        jMenuItem17.setText("Situação da Cota");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem17);
 
-        jMenuItem14.setText("Consumo Mensal");
-        jMenu4.add(jMenuItem14);
+        jMenuItem18.setText("Consumo Mensal");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem18);
 
-        barraMenu.add(jMenu4);
+        barraMenu.add(jMenu6);
 
         setJMenuBar(barraMenu);
 
@@ -365,6 +377,20 @@ public class HomeScreen extends javax.swing.JFrame {
         screen.setModoNoturno(this.modoNoturno.isSelected());
         this.dispose();
     }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        SituacaoCota screen = new SituacaoCota();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        ConsumoMensal screen = new ConsumoMensal();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
     public void setModoNoturno(boolean mode){
         if(mode)
             this.modoNoturno.setSelected(true);
@@ -400,13 +426,13 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

@@ -10,6 +10,13 @@ import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
 import java.awt.EventQueue;
 import views.LoginScreen;
+import views.abastecimentos.AbastecimentosScreen;
+import views.fornecedor.FornecedorScreen;
+import views.fornecimentos.FornecimentosScreen;
+import views.militar.MilitarScreen;
+import views.relatorios.ConsumoMensal;
+import views.relatorios.SituacaoCota;
+import views.tanque.TanqueScreen;
 
 /**
  *
@@ -41,17 +48,17 @@ public class ViaturaListScreen extends javax.swing.JFrame {
         modoNoturno = new javax.swing.JCheckBoxMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem15 = new javax.swing.JMenuItem();
-        jMenuItem16 = new javax.swing.JMenuItem();
-        jMenu7 = new javax.swing.JMenu();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,46 +112,81 @@ public class ViaturaListScreen extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setText("Cadastro");
+        jMenu6.setText("Cadastro");
 
-        jMenuItem3.setText("Usuários");
-        jMenu4.add(jMenuItem3);
-
-        jMenuItem4.setText("Forenecedores");
-        jMenu4.add(jMenuItem4);
-
-        jMenuItem6.setText("Viaturas");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem7.setText("Usuários");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                jMenuItem7ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem6);
+        jMenu6.add(jMenuItem7);
 
-        jMenuItem5.setText("Tanques");
-        jMenu4.add(jMenuItem5);
+        jMenuItem8.setText("Forenecedores");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem8);
 
-        jMenuBar1.add(jMenu4);
+        jMenuItem9.setText("Tanques");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem9);
 
-        jMenu5.setText("Lançamentos");
+        jMenuItem10.setText("Viaturas");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem10);
 
-        jMenuItem15.setText("Abastecimentos");
-        jMenu5.add(jMenuItem15);
+        jMenuBar1.add(jMenu6);
 
-        jMenuItem16.setText("Fornecimentos");
-        jMenu5.add(jMenuItem16);
+        jMenu9.setText("Lançamentos");
 
-        jMenuBar1.add(jMenu5);
+        jMenuItem17.setText("Abastecimentos");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        jMenu9.add(jMenuItem17);
 
-        jMenu7.setText("Relatórios");
+        jMenuItem18.setText("Fornecimentos");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu9.add(jMenuItem18);
 
-        jMenuItem13.setText("Situação da Cota");
-        jMenu7.add(jMenuItem13);
+        jMenuBar1.add(jMenu9);
 
-        jMenuItem14.setText("Consumo Mensal");
-        jMenu7.add(jMenuItem14);
+        jMenu8.setText("Relatórios");
 
-        jMenuBar1.add(jMenu7);
+        jMenuItem19.setText("Situação da Cota");
+        jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem19ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem19);
+
+        jMenuItem20.setText("Consumo Mensal");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem20);
+
+        jMenuBar1.add(jMenu8);
 
         setJMenuBar(jMenuBar1);
 
@@ -208,12 +250,61 @@ public class ViaturaListScreen extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu3ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        MilitarScreen screen = new MilitarScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        FornecedorScreen screen = new FornecedorScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        TanqueScreen screen = new TanqueScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         ViaturaScreen screen = new ViaturaScreen();
         screen.setVisible(true);
         screen.setModoNoturno(this.modoNoturno.isSelected());
         this.dispose();
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        AbastecimentosScreen screen = new AbastecimentosScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        FornecimentosScreen screen = new FornecimentosScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
+    private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
+        SituacaoCota screen = new SituacaoCota();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem19ActionPerformed
+
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+        ConsumoMensal screen = new ConsumoMensal();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
     public void setModoNoturno(boolean mode){
         if(mode)
             this.modoNoturno.setSelected(true);
@@ -243,20 +334,20 @@ public class ViaturaListScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JCheckBoxMenuItem modoNoturno;
