@@ -4,6 +4,19 @@
  */
 package views.relatorios;
 
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatIntelliJLaf;
+import com.formdev.flatlaf.FlatLaf;
+import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
+import java.awt.EventQueue;
+import views.LoginScreen;
+import views.abastecimentos.AbastecimentosScreen;
+import views.fornecedor.FornecedorScreen;
+import views.fornecimentos.FornecimentosScreen;
+import views.militar.MilitarScreen;
+import views.tanque.TanqueScreen;
+import views.viatura.ViaturaScreen;
+
 /**
  *
  * @author J Nogueira
@@ -26,24 +39,33 @@ public class SituacaoCota extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         modoNoturno = new javax.swing.JCheckBoxMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem15 = new javax.swing.JMenuItem();
-        jMenuItem16 = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Disponibilidade de Combustível");
+
+        jLabel3.setText("Data de Ressuprimento");
 
         jMenu3.setText("Sistema");
         jMenu3.addActionListener(new java.awt.event.ActionListener() {
@@ -78,76 +100,81 @@ public class SituacaoCota extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setText("Cadastro");
-        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+        jMenu7.setText("Cadastro");
+
+        jMenuItem7.setText("Usuários");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu4ActionPerformed(evt);
+                jMenuItem7ActionPerformed(evt);
             }
         });
+        jMenu7.add(jMenuItem7);
 
-        jMenuItem3.setText("Usuários");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem8.setText("Forenecedores");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItem8ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem3);
+        jMenu7.add(jMenuItem8);
 
-        jMenuItem4.setText("Forenecedores");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem9.setText("Tanques");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jMenuItem9ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem4);
+        jMenu7.add(jMenuItem9);
 
-        jMenuItem6.setText("Viaturas");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem10.setText("Viaturas");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                jMenuItem10ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem6);
+        jMenu7.add(jMenuItem10);
 
-        jMenuItem5.setText("Tanques");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jMenuBar1.add(jMenu7);
+
+        jMenu9.setText("Lançamentos");
+
+        jMenuItem17.setText("Abastecimentos");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jMenuItem17ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem5);
+        jMenu9.add(jMenuItem17);
 
-        jMenuBar1.add(jMenu4);
-
-        jMenu5.setText("Lançamentos");
-
-        jMenuItem15.setText("Abastecimentos");
-        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem18.setText("Fornecimentos");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem15ActionPerformed(evt);
+                jMenuItem18ActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem15);
+        jMenu9.add(jMenuItem18);
 
-        jMenuItem16.setText("Fornecimentos");
-        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+        jMenuBar1.add(jMenu9);
+
+        jMenu8.setText("Relatórios");
+
+        jMenuItem19.setText("Situação da Cota");
+        jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem16ActionPerformed(evt);
+                jMenuItem19ActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem16);
+        jMenu8.add(jMenuItem19);
 
-        jMenuBar1.add(jMenu5);
+        jMenuItem20.setText("Consumo Mensal");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem20);
 
-        jMenu6.setText("Relatórios");
-
-        jMenuItem13.setText("Situação da Cota");
-        jMenu6.add(jMenuItem13);
-
-        jMenuItem14.setText("Consumo Mensal");
-        jMenu6.add(jMenuItem14);
-
-        jMenuBar1.add(jMenu6);
+        jMenuBar1.add(jMenu8);
 
         setJMenuBar(jMenuBar1);
 
@@ -155,11 +182,33 @@ public class SituacaoCota extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(146, 146, 146)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
+                    .addComponent(jTextField1))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 377, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
 
         pack();
@@ -206,81 +255,80 @@ public class SituacaoCota extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu3ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         MilitarScreen screen = new MilitarScreen();
         screen.setVisible(true);
         screen.setModoNoturno(this.modoNoturno.isSelected());
         this.dispose();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         FornecedorScreen screen = new FornecedorScreen();
         screen.setVisible(true);
         screen.setModoNoturno(this.modoNoturno.isSelected());
         this.dispose();
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        ViaturaScreen screen = new ViaturaScreen();
-        screen.setVisible(true);
-        screen.setModoNoturno(this.modoNoturno.isSelected());
-        this.dispose();
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         TanqueScreen screen = new TanqueScreen();
         screen.setVisible(true);
         screen.setModoNoturno(this.modoNoturno.isSelected());
         this.dispose();
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
 
-    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu4ActionPerformed
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        ViaturaScreen screen = new ViaturaScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
-    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
         AbastecimentosScreen screen = new AbastecimentosScreen();
         screen.setVisible(true);
         screen.setModoNoturno(this.modoNoturno.isSelected());
         this.dispose();
-    }//GEN-LAST:event_jMenuItem15ActionPerformed
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
 
-    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
         FornecimentosScreen screen = new FornecimentosScreen();
         screen.setVisible(true);
         screen.setModoNoturno(this.modoNoturno.isSelected());
         this.dispose();
-    }//GEN-LAST:event_jMenuItem16ActionPerformed
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
 
+    private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
+        SituacaoCota screen = new SituacaoCota();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem19ActionPerformed
+
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+        ConsumoMensal screen = new ConsumoMensal();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
+    public void setModoNoturno(boolean mode){
+        if(mode)
+            this.modoNoturno.setSelected(true);
+        else
+            this.modoNoturno.setSelected(false);
+    }
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+        EventQueue.invokeLater(new Runnable(){
+            @Override
+            public void run(){
+                FlatAnimatedLafChange.showSnapshot();
+                FlatIntelliJLaf.setup();
+                FlatLaf.updateUI();
+                FlatAnimatedLafChange.hideSnapshotWithAnimation();
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SituacaoCota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SituacaoCota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SituacaoCota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SituacaoCota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+        });
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SituacaoCota().setVisible(true);
@@ -289,21 +337,26 @@ public class SituacaoCota extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JCheckBoxMenuItem modoNoturno;
     // End of variables declaration//GEN-END:variables
 }

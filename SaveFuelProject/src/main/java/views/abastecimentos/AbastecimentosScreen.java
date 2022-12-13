@@ -10,6 +10,13 @@ import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
 import java.awt.EventQueue;
 import views.LoginScreen;
+import views.fornecedor.FornecedorScreen;
+import views.fornecimentos.FornecimentosScreen;
+import views.militar.MilitarScreen;
+import views.relatorios.ConsumoMensal;
+import views.relatorios.SituacaoCota;
+import views.tanque.TanqueScreen;
+import views.viatura.ViaturaScreen;
 
 /**
  *
@@ -150,6 +157,11 @@ public class AbastecimentosScreen extends javax.swing.JFrame {
         jMenu5.setText("Cadastro");
 
         jMenuItem3.setText("Usuários");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem3);
 
         jMenuItem4.setText("Forenecedores");
@@ -161,9 +173,19 @@ public class AbastecimentosScreen extends javax.swing.JFrame {
         jMenu5.add(jMenuItem4);
 
         jMenuItem5.setText("Tanques");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem5);
 
         jMenuItem6.setText("Viaturas");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem6);
 
         jMenuBar1.add(jMenu5);
@@ -171,9 +193,19 @@ public class AbastecimentosScreen extends javax.swing.JFrame {
         jMenu9.setText("Lançamentos");
 
         jMenuItem15.setText("Abastecimentos");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
         jMenu9.add(jMenuItem15);
 
         jMenuItem16.setText("Fornecimentos");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
         jMenu9.add(jMenuItem16);
 
         jMenuBar1.add(jMenu9);
@@ -181,9 +213,19 @@ public class AbastecimentosScreen extends javax.swing.JFrame {
         jMenu4.setText("Relatórios");
 
         jMenuItem13.setText("Situação da Cota");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem13);
 
         jMenuItem14.setText("Consumo Mensal");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem14);
 
         jMenuBar1.add(jMenu4);
@@ -295,7 +337,10 @@ public class AbastecimentosScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu8ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        ;
+        FornecedorScreen screen = new FornecedorScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -307,8 +352,57 @@ public class AbastecimentosScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        MilitarScreen screen = new MilitarScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        TanqueScreen screen = new TanqueScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        ViaturaScreen screen = new ViaturaScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+        AbastecimentosScreen screen = new AbastecimentosScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+        FornecimentosScreen screen = new FornecimentosScreen();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        SituacaoCota screen = new SituacaoCota();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        ConsumoMensal screen = new ConsumoMensal();
+        screen.setVisible(true);
+        screen.setModoNoturno(this.modoNoturno.isSelected());
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
     public void setModoNoturno(boolean mode){
         if(mode)
             this.modoNoturno.setSelected(true);
